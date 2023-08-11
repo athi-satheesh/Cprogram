@@ -1,0 +1,37 @@
+while program
+even program-
+#include <stdio.h>
+
+void main() {
+    int i;
+    printf("Enter number to print even numbers:");
+    scanf("%d",&i);
+    while(i>0){
+        if(i%2==0){
+         printf("%d\n", i);
+        }
+        i--;
+    }
+    return 0;
+}
+
+odd program -
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void main() {
+    int i;
+    printf("Enter number to print even numbers:");
+    scanf("%d",&i);
+    while(i>0){
+        if(i%2!=0){
+         printf("%d ", i);
+        }
+        i--;
+    }
+    return 0;
+}
+
+   
+
+   
