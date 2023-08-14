@@ -1,0 +1,11 @@
+Function exe
+
+#include <stdio.h>
+int sumfun();
+int main() {
+    sumfun();
+}
+int sumfun(){
+    int a=100, b=68;
+    printf("Sum of %d + %d = %d", a, b, a+b);
+}

@@ -1,0 +1,16 @@
+Multiplication table of a number:
+
+#include <stdio.h>
+int main() {
+    int i,  num, limit, mul=1;
+    printf("Enter the number to find multiplication table:");
+    scanf("%d", &num);
+    printf("Enter the limit upto which table to be printed:");
+    scanf("%d", &limit);
+    printf("Multiplication table of %d upto %d:\n", num, limit);
+    for(i=1; i<=limit;i++){
+        mul = num*i;
+        printf("%d * %d = %d\n", num, i, mul);
+    }
+    return 0;
+}

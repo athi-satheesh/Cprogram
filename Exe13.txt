@@ -1,0 +1,33 @@
+Swapping 
+
+#include <stdio.h>
+int swap();
+int main() {
+    swap();
+}
+int swap(){
+    int a=100, b=68, temp;
+    temp=a;
+    a=b;
+    b=temp;
+    printf("Value after swaping a = %d b= %d", a, b);
+}
+
+Swapping without third variable
+
+#include <stdio.h>
+int swap();
+int main() {
+    swap();
+}
+int swap(){
+    int a, b;
+    printf("Enter first number:");
+    scanf("%d", &a);
+    printf("Enter second number:");
+    scanf("%d", &b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("Value after swaping number1 = %d number2 = %d", a, b);
+}
