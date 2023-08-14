@@ -1,0 +1,43 @@
+Assignment 1- Enter 2 number and do operations:
+
+#include <stdio.h>
+#include<string.h>
+int main() {
+    float num1, num2;
+    char op;
+    printf("Enter two numbers:");
+    scanf("%f%f", &num1, &num2);
+    printf("Enter the operation to be done:");
+    scanf("%s", &op);
+    switch(op){
+        case '+':
+            printf("Sum of two numbers:%f", num1+num2);
+            break;
+        case '-':
+            printf("Subrstraction of two numbers:%f", num1-num2);
+            break;
+        case '*':
+            printf("Multiplication of two numbers:%f", num1*num2);
+            break;
+        case '/':
+            printf("Division of two numbers:%f",num1/num2);
+            break;
+        default:
+         printf("Invalid operator entered");
+    }
+    return 0;
+}
+
+Assignment 2 - Factorial of a number
+
+#include <stdio.h>
+int main() {
+    int i,n, fact=1;
+    printf("Enter a number to find factorial:");
+    scanf("%d", &n);
+    for(i=1;i<=n;i++){
+        fact=fact*i;
+    }
+     printf("Factorial of the given number %d is:%d",n,fact);
+    return 0;
+}
