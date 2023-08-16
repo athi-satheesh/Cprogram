@@ -1,0 +1,44 @@
+Function with return type
+
+#include <stdio.h>
+int sum();
+int main() {
+    int a;
+    a=sum();
+    printf("Sum = %d", a);
+    return 0;
+}
+int sum(){
+    int b=50,c=69, sum;
+    sum=b+c;
+    return sum;
+}
+
+Function with arguments
+
+#include <stdio.h>
+int sum(int, int);
+int main() {
+    int a=10,b=56;
+    sum(a,b);
+}
+int sum(int x, int y){
+    int sum;
+    sum=x+y;
+    printf("Sum= %d", sum);
+}
+
+FUnction with arguments and return
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int sum(int, int);
+int main() {
+    int a=10,b=56;
+    printf("Sum = %d", sum(a,b));
+}
+int sum(int x, int y){
+    int sum;
+    sum=x+y;
+    return sum;
+}

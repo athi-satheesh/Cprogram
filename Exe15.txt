@@ -1,0 +1,36 @@
+Function call by value
+
+#include <stdio.h>
+int swap(int, int);
+int main() {
+    int a=10,b=56;
+    printf("Before swaping a=%d, b=%d\n", a, b);
+    swap(a,b);
+    printf("After swapping in main a=%d, b=%d\n", a, b);
+}
+int swap(int a, int b){
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    printf("After swapping a=%d, b=%d\n", a, b);
+}
+
+Function by reference
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int swap(int *, int *);
+int main() {
+    int a=10,b=56;
+    printf("Before swaping a=%d, b=%d\n", a, b);
+    swap(&a,&b);
+    printf("After swapping in main a=%d, b=%d\n", a, b);
+}
+int swap(int *x, int *y){
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+    printf("After swapping a=%d, b=%d\n", *x, *y);
+}

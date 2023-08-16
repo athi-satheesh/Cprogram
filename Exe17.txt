@@ -1,0 +1,29 @@
+Largest and sec largest
+#include <stdio.h>
+
+int main() {
+    int i, limit, larg, sec_larg;
+    printf("How many elements in the array:");
+    scanf("%d", &limit);
+    int marks[limit];
+    
+    for(i=0;i<limit;i++){
+        printf("Enter the element %d:", i+1);
+        scanf("%d", &marks[i]);
+    }
+    larg = marks[0];
+    sec_larg = marks[1];
+    for(i=0;i<limit; i++){
+       if(marks[i]>larg){
+           sec_larg=larg;
+           larg=marks[i];
+       }
+       else if(marks[i]>sec_larg && marks[i]!=larg){
+           sec_larg=marks[i];
+       }
+    }
+    printf("Largest in the array: %d\nSecond largest: %d", larg, sec_larg);
+}
+
+
+    
