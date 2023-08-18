@@ -1,0 +1,35 @@
+Step1: Start
+Step2: Declare three integers num, i, flag;
+Step3: Initialse flag;
+Step4: Input and store value of num
+Step5: Declare a for loop with intial value of i=2 and condition i<=num and increment i. 
+	Inside for loop, check if num%i==0, then increment flag
+Step6: Check if flag==1, then print the number is prime, else not prime
+Step7: Stop
+
+
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+    int num, i;
+    int flag=0;
+    printf("Enter the number: ");
+    scanf("%d", &num);
+    for(i=2; i<=num; i++){
+        if(num%i==0){
+            flag+=1;
+        }
+        //printf("%d", flag);
+    }
+    if(flag==1){
+         printf("The number %d is prime.", num); 
+    }
+    else{
+        printf("The number %d is not prime.", num); 
+    }
+    
+   
+    return 0;
+}

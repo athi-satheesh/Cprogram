@@ -1,0 +1,18 @@
+Structure declaration 
+
+#include <stdio.h>
+#include<string.h>
+struct employee{
+         int id;
+         char name[20];
+         float salary;
+     }e1;
+int main() {
+     e1.id = 788;
+     e1.salary =20000;
+     strcpy(e1.name,"Jisha\0");
+     printf("Employee id:%d\n", e1.id);
+     printf("Employee name:%s\n", e1.name);
+     printf("Salary:%f",e1.salary);
+    return 0;
+}

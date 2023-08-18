@@ -1,0 +1,14 @@
+String declaration
+
+#include <stdio.h>
+
+int main() {
+     char str[]="Have a nice day ";
+     printf("%s", str);
+     char str1[]={'A','t','h','i','r','a','\0'};
+     int i;
+     for(i=0;i<7;i++){
+         printf("%c", str1[i]);
+     }
+    return 0;
+}

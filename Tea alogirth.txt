@@ -1,0 +1,10 @@
+How to make tea: Algorithm
+
+Step 1: Start
+Step 2: Declare milk, water, teapan, teapowder, sugar, i, num
+Step 3: Input & store num of people who want tea in num
+Step 4: Declare a for loop with initial value of i=1, check if i==n, and increment i
+	and inside for loop increment each of milk, water, teapowder, sugar by 1.
+Step 5: print teapan = sugar+teapowder+milk+water
+Step 6: Stop
+
