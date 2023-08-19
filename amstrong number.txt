@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+   int num, rem;
+   int i, sum=0;
+   printf("Enter the limit:");
+   scanf("%d", &num);
+   int a;
+   for(i=0;i<=num;i++){
+       a=i;
+       while(a>0){
+        rem=a%10;
+        sum = sum + rem*rem*rem;
+        a = a/10;
+   }
+   if(i==sum || i==0){
+       printf("%d\t", i);
+   }
+   sum =0;
+   }
+    return 0;
+}
