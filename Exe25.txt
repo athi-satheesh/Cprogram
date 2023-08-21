@@ -1,0 +1,29 @@
+Insert elements at end of array
+
+#include <stdio.h>
+int insertedarray(int arr[], int n, int key, int capacity){
+    if(n>=capacity){
+        printf("\nCannot add elements");
+       return n;
+    }
+    arr[n]=key;
+    return n+1;
+   
+}
+int main() {
+    int arr[20]={10,15,20,25,30,35};
+    int i;
+    int capacity = sizeof(arr)/sizeof(arr[0]);
+    int n = 6;
+    int key = 40;
+    printf("Before insertion:");
+    for(i=0; i<n; i++){
+        printf("%d ", arr[i]);
+    }
+    int newarr = insertedarray(arr, n, key, capacity);
+    printf("\nNew array:");
+    for(int i=0; i<newarr; i++){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}

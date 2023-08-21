@@ -1,0 +1,20 @@
+Sorting program
+
+#include <stdio.h>
+
+int main() {
+    int i,j,temp;
+    int arr[10]={15,36,12,18,89,87,44,53,37,95};
+    printf("The sorted array:");
+    for(i=0;i<10; i++){
+        for(j=i+1; j<10; j++){
+            if(arr[j]>arr[i]){
+                temp = arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
