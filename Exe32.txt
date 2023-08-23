@@ -1,0 +1,26 @@
+Insertion sorting
+
+
+#include <stdio.h>
+int InsertionArray(int arr[], int n){
+    for(int i=1; i<n; i++){
+      int key = arr[i];
+      int j=i-1;
+      while(j>=0 && arr[j]>key){
+          arr[j+1]=arr[j];
+          j=j-1;
+      }
+        arr[j+1]=key;
+    }
+}
+
+int main() {
+    int arr[]= {26,95,72,36,2,0,56};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int i;
+    InsertionArray(arr, n);
+    for(i=0; i<n; i++){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}

@@ -1,0 +1,35 @@
+Selection sort
+
+#include <stdio.h>
+int sortArray(int arr[], int n){
+    for(int i=0; i<n; i++){
+       int  min=i;
+      // printf("Firstmin %d", min);
+        for(int j=i+1; j<n; j++){
+            if(arr[j]<arr[min]){
+                min = j;
+                 //printf("\n%d min ", min);
+            }
+        }
+        if(min!=i)
+        //printf("HI %d", min);
+            swap(&arr[min], &arr[i]);
+        
+    }
+}
+int swap(int *x, int *y){
+   int temp; 
+   temp = *x;
+    *x=*y;
+    *y=temp;
+}
+int main() {
+    int arr[]= {26,95,72,36,2,0,56};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int i;
+    sortArray(arr, n);
+    for(i=0; i<n; i++){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}

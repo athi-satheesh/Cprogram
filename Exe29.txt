@@ -1,0 +1,50 @@
+Binary search deletion
+
+#include <stdio.h>
+int deleteElement(int arr[], int n, int key){
+    int i;
+    
+    int pos = binarySearch(arr,0, n-1, key);
+    //printf("POS %d, n = %d", pos, n);
+    if(pos==-1){
+        printf("\nElement not found.");
+        return n;
+    }
+    for(i=pos;i<n-1;i++){
+        printf("pos %d", pos);
+        arr[i]=arr[i+1];
+    }
+    return n-1;
+    
+    
+}
+int binarySearch(int arr[], int left,int right, int key){
+    // printf("%d %d %d %d",arr[2],left,right,key);
+    // printf("\nhi left %d  right %d", left, right);
+    if(left>right){
+        return -1;}
+    else{
+    int mid = (left+right)/2;
+    //printf("\nmy mid %d", mid);
+    if(key==arr[mid])
+        return mid;
+    if(key>arr[mid])
+        return binarySearch(arr, (mid+1), right, key);
+    return binarySearch(arr, left, (mid-1), key);
+        }  
+}
+int main() {
+    int arr[]= {52,69,43,77,1,0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int key =77;
+    printf("Array before deletion:");
+    for(int i=0; i<n; i++){
+        printf("%d ", arr[i]);
+    }
+    int new_n = deleteElement(arr, n, key);
+    printf("\nArray after deletion:");
+    for(int i=0; i<new_n; i++){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}

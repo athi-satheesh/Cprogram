@@ -1,0 +1,40 @@
+//line C compiler to run C program online
+#include <stdio.h>
+int deleteElement(int arr[], int n, int key){
+    int i;
+    int pos = findElement(arr, n, key);
+    //printf("POS %d, n = %d", pos, n);
+    if(pos==-1){
+        printf("\nElement not found.");
+        return n;
+    }
+    
+    for(i=pos;i<n-1;i++)
+        arr[i]=arr[i+1];
+    return n-1;
+    
+    
+}
+int findElement(int arr[], int n, int key){
+    for(int i =0; i<n; i++){
+        if(arr[i]==key){
+            return i;
+        }
+    }
+    return -1;
+}
+int main() {
+    int arr[]= {52,69,43,77,1,0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int key =100;
+    printf("Array before deletion:");
+    for(int i=0; i<n; i++){
+        printf("%d ", arr[i]);
+    }
+    int new_n = deleteElement(arr, n, key);
+    printf("\nArray after deletion:");
+    for(int i=0; i<new_n; i++){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
